@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "symfony/filesystem": "^7.3"
+        "symfony/filesystem": "^5.4"
     },
     "require-dev": {
         "tightenco/collect": "^9.52"
