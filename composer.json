@@ -1,0 +1,22 @@
+{
+    "name": "timurikvx/filebase",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Timurikvx\\Filebase\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Тимур",
+            "email": "timurikvx@mail.ru"
+        }
+    ],
+    "require": {
+        "symfony/filesystem": "^7.3"
+    },
+    "require-dev": {
+        "tightenco/collect": "^9.52"
+    }
+}
