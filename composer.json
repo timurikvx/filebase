@@ -14,7 +14,8 @@
         }
     ],
     "require": {
-        "symfony/filesystem": "^5.4"
+        "symfony/filesystem": "^5.4",
+        "ext-openssl": "*"
     },
     "require-dev": {
         "tightenco/collect": "^9.52"
