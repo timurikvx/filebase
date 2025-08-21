@@ -27,11 +27,20 @@ class Filebase
         $this->filesystem->mkdir($this->dir);
     }
 
-//    public function setTable(string $table): Table
-//    {
-//        $filename = $this->dir.'/'.$table.'.bin';
-//        return new Table($filename);
-//    }
+    public function createTable(string $table, array $indexes = [], string $crypto = ''): Table
+    {
+        $dir = $this->dir.'/'.$table.'/';
+        return Table::create($dir, $indexes, $crypto);
+    }
+
+    public function table(string $table): Table|null
+    {
+        $filename = $this->dir.'/'.$table.'/';
+        if(!file_exists($filename.'data.bin')){
+            return null;
+        }
+        return new Table($filename);
+    }
 
     public function getByKey(string $key, $default = null): mixed
     {
