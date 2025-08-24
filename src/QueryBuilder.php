@@ -199,6 +199,8 @@ class QueryBuilder
             $array = $this->search($index, $wheres);
             if(!empty($array)){
                 $arrays[] = $array;
+            }else{
+                $arrays = [];
             }
         }
         return $this->getKeys($arrays);
@@ -378,7 +380,6 @@ class QueryBuilder
         $deleted = false;
 
         while (($line = fgets($input)) !== false) {
-            //dump($currentLine);
             if (!in_array($currentLine, $lines)) {
                 fwrite($output, $line);
             } else {
